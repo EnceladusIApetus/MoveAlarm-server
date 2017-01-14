@@ -109,4 +109,17 @@ class GroupController extends BaseController {
         $group->updateData(Input::all());
         return StatusDescriptor::createProcessStatus(true);
     }
+
+    /*public function addScore()
+    {
+        $data = Input::all();
+        $event = Events::all()->last();
+        $group = Group::find($data['id']);
+        $group->score += $group->score;
+        $progress = $group->progress()->first();
+        if(intval($progress->updated_at->format('d')) != intval((new DateTime($event->time))->format('d'))){
+            $progress->total++;
+            $progress->
+        }
+    }*/
 }

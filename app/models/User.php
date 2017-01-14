@@ -32,8 +32,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		$this->bmi = (isset($data['bmi'])) ? $data['bmi'] : $this->bmi;
 		$this->birthdate = (isset($data['birthdate'])) ? $data['birthdate'] : $this->birthdate;
 		$this->save();
-		$this->daily_progress()->get()->first()->updateData($data['daily_progress']);
-		$this->weekly_progress()->get()->first()->updateData($data['weekly_progress']);
+		if(isset($data['daily_progress']))
+			$this->daily_progress()->get()->first()->updateData($data['daily_progress']);
+		if(isset($data['weekly_progress']))
+			$this->weekly_progress()->get()->first()->updateData($data['weekly_progress']);
 	}
 
 	/*public function getFNameAttribute() {

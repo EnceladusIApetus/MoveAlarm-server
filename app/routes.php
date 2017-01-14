@@ -40,6 +40,7 @@ Route::group(array('prefix' => 'group'), function()
 	Route::post('rankByUser', 'GroupController@getRankByUser');
 	Route::post('leave', 'GroupController@leave');
 	Route::post('delete', 'GroupController@delete');
+	Route::post('addScore', 'GroupController@addScore');
 });
 
 Route::get("/event/getEvent", 'EventController@getEvent');
