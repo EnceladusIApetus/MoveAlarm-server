@@ -1,5 +1,5 @@
 <?php
 
-class Event extends Eloquent {
+class Events extends Eloquent {
 
 }

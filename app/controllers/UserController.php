@@ -19,7 +19,7 @@ class UserController extends BaseController {
 
 	public function login() {
 		$log = new ClientInputLog;
-		$log->title = "on user login";
+		$log->title = "on user logine";
 		$log->details = json_encode(Input::all());
 		$log->save();
 		$user = User::where('facebook_id', '=', Input::get('facebook_id'))->get()->first();

@@ -19,4 +19,18 @@ class UserDailyProgress extends Eloquent
 		$this->hip_leg_calf = (isset($data['hip_leg_calf'])) ? $data['hip_leg_calf'] : $this->hip_leg_calf;
 		return $this->save();
 	}
+
+	public function resetData()
+	{
+		$this->exercise_time = 0;
+		$this->total_activity = 0;
+		$this->accept = 0;
+		$this->neck = 0;
+		$this->shoulder = 0;
+		$this->chest_back = 0;
+		$this->wrist = 0;
+		$this->waist = 0;
+		$this->hip_leg_calf = 0;
+		$this->save();
+	}
 }

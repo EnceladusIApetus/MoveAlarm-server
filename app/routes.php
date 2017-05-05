@@ -27,6 +27,7 @@ Route::group(array('prefix' => 'user'), function()
 	Route::post('temp_login', 'UserController@tempLogin');
 	Route::post('rank', 'UserController@getRank');
 	Route::get('topRank', 'UserController@getTopRank');
+	Route::get('clear_daily_progress', 'UserProgressController@clearDailyProgress');
 });
 
 Route::group(array('prefix' => 'group'), function()
